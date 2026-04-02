@@ -30,69 +30,33 @@
 
    //for(let i = 0; i<fruits.length; i++){
     //console.log(fruits[i])
-   //}
-
-   //qn 5
-   //const greetings = (name = "Guest") => {
-    //return "Hello!" + name
-   //}
-   //console.log(greetings())
-   //console.log("Mueni")
-
-   //qn 6
-   //class student{
-    //constructor(name, grade){
-        //this.name = name
-        //this.grade = grade
-    //}
-
-    //checkResult(){
-        //if(this.grade >= 50){
-            //console.log(this.name + "passed")
-        //}else{
-            //console.log(this.name + "failed")
-       // }
 //}
-   //}
 
-//const student1 = new student("Alice" , 65)
-//student1.checkResult()
+//Qn 5
+//let greeting = (name = `guest` ) => {
+  //return `Hello $(name)`
+//}
+//console.log(greeting[name])
 
-
-//const student2 =new student("John" , 35)
-//student2.checkResult()
-
-//qn 7
-//const myPromise = new Promise((resolve, reject) => {
-  //setTimeout(() => {
-    //resolve("Done");
- // }, 2000); // 2 seconds
-//});
-
-//myPromise.then(() => {
- // console.log("Task Complete!");
-//});
-
-//qn 8
-function factorial(n) {
-  try {
-    if (typeof n !== "number" || n < 0) {
-      throw new Error("Invalid input");
+//qn 6
+   class student{
+    constructor(name, grade){
+        this.name = name;
+        this.grade = grade;
     }
 
-    let result = 1;
-
-    for (let i = 1; i <= n; i++) {
-      result *= i;
-    }
-
-    return result;
-
-  } catch (error) {
-    console.log("Error:", error.message);
-  }
+    checkResult(){
+        if(this.grade >= 50){
+            console.log(this.name +  " has passed")
+        }else{
+            console.log(this.name + " has failed")
+        }
 }
+   }
 
-console.log(factorial(5)) 
-console.log(factorial(-2)) 
-console.log(factorial("a"))
+const student1 = new student("Yasmine" , 74)
+student1.checkResult()
+
+
+const student2 =new student("Beatrice" , 89)
+student2.checkResult()
