@@ -1,42 +1,41 @@
-//qn 1ole.log("The number is even")
- //}else{
-   // console.log("The number is odd")
- //}
+//qn 1
+let num1 = 2
+let num2 = 4
 
- //qn 3
- //let n =9
-//let num1 = 2
-//let num2 = 4
-
- //function sum(num1, num2){
-   // return num1 + num2
- //}
- //let addition = sum(num1 ,num2)
- //console.log(addition)
+ function sum (num1 , num2){
+  return num1 , num2
+ }
+ let addition = sum (num1 , num2)
+ console.log(addition)
 
  //qn 2
-// let num = 5
+ let num = 5
 
- //if(num % 2 === 0){
-   // cons
- //let sum = 0
- //for(let i= 1 ; i<= n; i++){
-    //sum +=i
- //}
-  // console.log(sum)
+ if(num % 2 === 0){
+  console.log("The number is even")
+ }else{
+  console.log("The number is odd")
+ }
 
-   //qn 4
-   //let fruits =["grapes" , "apple" , "banana" , "pineapple" , "watermelon"]
+ //qn 3
+ let n = 9
+ let sum = 0
+ for(let i = 1; i<=n; i++){
+  sum +=i
+ }
+ console.log(sum)
 
-   //for(let i = 0; i<fruits.length; i++){
-    //console.log(fruits[i])
-//}
+ //gn 4
+ let fruits = ["grapes" , "apple" , "banana" , "watermelon" ,"pineapple"]
 
+ for(let i=0; i<fruits.length; i++){
+
+ }
 //Qn 5
-//let greeting = (name = `guest` ) => {
-  //return `Hello $(name)`
-//}
-//console.log(greeting[name])
+let greeting = (name = `guest` ) => {
+  return `Hello $(name)`
+}
+console.log(greeting[name])
 
 //qn 6
    class student{
@@ -60,3 +59,35 @@ student1.checkResult()
 
 const student2 =new student("Beatrice" , 89)
 student2.checkResult()
+
+//qn 7
+const myPromise = new Promise((resolve, reject) =>{
+    setTimeout(()=>{
+        resolve("Done");
+    }, 2000);
+});
+ myPromise.then(()=> {
+    console.log("Task complete")
+ })
+
+//qn 8
+function factorial(n) {
+    try {
+        if (typeof n !== "number" || n < 0){
+            throw new Error("Invalid input")
+        }
+        let result = 1
+
+        for (let i = 1; i <=n; i++){
+            result *=i
+        }
+
+        return result;
+    } catch (error){
+        console.log("Error",error.message)
+    }
+}
+
+console.log(factorial(5))
+console.log(factorial(-2))
+console.log(factorial("a"))
